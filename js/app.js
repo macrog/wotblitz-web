@@ -29,8 +29,7 @@ wotblitzApp.controller('AppCtrl', ['$rootScope','$scope', '$http', function ($ro
         }else{
             return '';
         }
-    }
-
+    };
 }])
 .directive('navBar', function() {
     return {
