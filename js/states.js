@@ -15,8 +15,8 @@ wotblitzApp.config(function ($stateProvider, $urlRouterProvider) {
                     requiresLogin: false,
                     id:2
                 },
-                templateUrl: "views/tankopedia.html"
-                    //controller: 'HomeCtrl'
+                templateUrl: "views/tankopedia.html",
+                controller: 'TankopediaCtrl'
             })
             .state('contact', {
                 url: "/contact",
@@ -24,8 +24,8 @@ wotblitzApp.config(function ($stateProvider, $urlRouterProvider) {
                     requiresLogin: false,
                     id:3
                 },
-                templateUrl: "views/contact.html"
-                    //controller: 'HomeCtrl'
+                templateUrl: "views/contact.html",
+                controller: 'ContactCtrl'
             });
 
         $urlRouterProvider.otherwise("home");
