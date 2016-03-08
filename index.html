@@ -8,63 +8,29 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <LINK REL="SHORTCUT ICON" href="raw/logo.png">
 </head>
 
 <body ng-controller="AppCtrl">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="">World of Tanks - Blitz Stats</a>
-            </div>
-            <div class="collapse navbar-collapse" id="centerednav">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="">Home</a></li>
-                    <li><a href="">Tankopedia</a></li>
-                    <li><a href="">Contact</a></li>                    
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
+    <!--navbar directive -->
+    <nav-bar></nav-bar>
 
-        </div>
-
-    </div>
+    <!--in teh main page cointainer ui-view -->
     <div class="container">
-    <div class="col-xs-9">
-        <input type="text" ng-model="player.nickname">
-    </div>
-    <div class="col-xs-3">
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Server
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="">Europe</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="">NA</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="">Russia</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="">Korea</a></li>                
-            </ul>
-        </div>
-
-    </div>
-       
-
+        <div ui-view=""></div>
     </div>
 
     <script src="lib/angularjs.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
+
     <!-- controllers -->
     <script src="js/app.js"></script>
+    <script src="js/homeCtrl.js"></script>
+    <script src="js/contactCtrl.js"></script>
+    <script src="js/tankopediaCtrl.js"></script>
+    <script src="js/states.js"></script>
 
 </body>
 
