@@ -1,0 +1,29 @@
+{
+  "name": "wotblitz-web",
+  "version": "1.0.0",
+  "description": "World of tanks - Blitz website for user statistics",
+  "main": "server.js",
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macrog/wotblitz-web.git"
+  },
+  "keywords": [
+    "wot",
+    "blitz"
+  ],
+  "author": "Maciek Gorczynski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macrog/wotblitz-web/issues"
+  },
+  "homepage": "https://github.com/macrog/wotblitz-web#readme"
+}
