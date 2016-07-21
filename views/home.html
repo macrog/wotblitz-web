@@ -1,38 +1,39 @@
-<div class="container-fluid">
-    <div class="row margin-top-30">
-        <!--left side of a full screen-->
-        <div class="col-xs-12 col-md-8 text-center">
-            <div class="row search-backbround">
-                <div class="col-xs-12 col-md-4">
-                    <input type="text" class="form-control" placeholder="The Commander">
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <select class="form-control col-xs-2 noFullWidth">
-                        <option>Europe</option>
-                        <option>North America</option>
-                        <option>Russia</option>
-                        <option>South East Asia</option>
-                        <option>Korea</option>
+<div class="container-fluid margin-top-30">            
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form name="user">                    
+                <div class="col-xs-12 col-sm-4">
+                    <input type="text" class="form-control" placeholder="Commander Name" ng-model="user.name" required>
+                </div>                
+                <div class="col-xs-12 col-sm-4">
+                    <select class="form-control col-xs-4 noFullWidth" ng-model="data.model" required>
+                        <option value="">---Please select---</option>
+                        <option ng-repeat="option in data.availableRegions" value="{{option.id}}">{{option.name}}</option>                      
                     </select>
                 </div>
-                <div class="col-xs-12 col-md-4">
-                    <button class="btn btn-default hvr-buzz-out btn-border">Search</button>
+                <div class="col-xs-12 col-sm-4">
+                    <button class="btn btn-default hvr-buzz-out btn-border" ng-click="search(user.name, data.model)" ng-disabled="user.$invalid">Search</button>
                 </div>
-            </div>
+            </form>
         </div>
-        <div class="col-xs-12 col-md-8 margin-top-30">
-            <div class="row">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Panel heading without title</div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
+    </div>
+    <!--left side-->
+    <div class="col-xs-12 col-sm-8 no-padding-l">           
+        <div class="panel panel-warning">
+            <div class="panel-heading">Panel heading without title</div>
+            <div class="panel-body">
+                Panel content
             </div>
-        </div>
-        <!-- right side -->
-        <div class="col-xs-12 col-md-4">RIGHT</div>
-
+        </div>            
+    </div>
+    <!--right side-->
+    <div class="col-xs-12 col-sm-4 no-padding-r">
+        <div class="panel panel-danger">
+            <div class="panel-heading">Personal Ratings</div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>    
     </div>
 </div>
 
